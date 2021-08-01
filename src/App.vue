@@ -1,30 +1,49 @@
 <template>
-  <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </div>
-  <router-view/>
+	<SideBar />
+	<div class="main-page">
+		<div class="main-body">
+			<TopBar />
+		</div>
+	</div>
 </template>
 
+<script>
+	import SideBar from './components/SideBar.vue'
+	import TopBar from './components/TopBar.vue'
+
+	export default {
+		name: 'App',
+
+		components: {
+			SideBar,
+			TopBar
+		}
+	}
+</script>
+
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+	body {
+		margin: 0px;
+		padding: 0px;
+		background-color: #212226;
+		color: #b08f67;
+	}
 
-#nav {
-  padding: 30px;
-}
+	.main-page {
+		background: url('/images/bg-image.png');
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+		background-position: center;
+		min-height: 100vh;
+		background-size: cover;
+		display: flex;
+		justify-content: center;
+		margin-left: 88px;
+	}
 
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
-}
+	.main-body {
+		width: 100%;
+		margin-left: 40px;
+		margin-right: 40px;
+	}
 </style>
