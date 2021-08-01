@@ -22,7 +22,13 @@
 </script>
 
 <style>
+	@font-face {
+		font-family: 'Cairo-Regular';
+		src: url('/fonts/Cairo-Regular.ttf');
+	}
+
 	body {
+		font-family: 'Cairo-Regular', sans-serif;
 		margin: 0px;
 		padding: 0px;
 		background-color: #212226;
