@@ -3,6 +3,7 @@
 	<div class="main-page">
 		<div class="main-body">
 			<TopBar />
+			<router-view class="page-content" />
 		</div>
 	</div>
 </template>
@@ -25,6 +26,11 @@
 	@font-face {
 		font-family: 'Cairo-Regular';
 		src: url('/fonts/Cairo-Regular.ttf');
+	}
+
+	@font-face {
+		font-family: 'Cairo-Black';
+		src: url('/fonts/Cairo-Black.ttf');
 	}
 
 	body {
@@ -51,5 +57,9 @@
 		width: 100%;
 		margin-left: 40px;
 		margin-right: 40px;
+	}
+
+	.page-content {
+		padding: 20px;
 	}
 </style>

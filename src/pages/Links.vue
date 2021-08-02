@@ -1,6 +1,6 @@
 <template>
 	<div>
-		learn
+		links
 	</div>
 </template>
 

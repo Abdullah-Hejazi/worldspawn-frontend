@@ -2,7 +2,7 @@
 	<div class="nav-bar">
 		<div v-for="button in buttons" :key="button.name">
 			<router-link :to="button.url" active-class="nav-button-selected" class="nav-button">
-				<font-awesome-icon :icon="['fas', button.icon]" size="2x" class="nav-icon" />
+				<font-awesome-icon :icon="['fas', button.icon]" size="lg" class="nav-icon" />
 				<span class="nav-button-text">{{ button.name }}</span>
 			</router-link>
 		</div>

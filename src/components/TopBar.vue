@@ -7,8 +7,10 @@
 		</div>
 
 		<div class="search-bar">
-			<input type="text" class="search-input" placeholder="Search..." @keyup.enter="onSearch" v-model="search" />
-			<font-awesome-icon :icon="['fas', 'search']" size="lg" class="search-icon" @click="onSearch" />
+			<div class="search-bar-container">
+				<input type="text" class="search-input" placeholder="Search..." @keyup.enter="onSearch" v-model="search" />
+				<font-awesome-icon :icon="['fas', 'search']" size="lg" class="search-icon" @click="onSearch" />
+			</div>
 		</div>
 
 		<div class="upload-button" @click="onUpload">
@@ -63,20 +65,25 @@
 		text-align: center;
 	}
 
+	.search-bar-container {
+		display: inline-block;
+		background-color: #212126;
+		-webkit-box-shadow: 3px 3px 17px 0px rgba(0,0,0,0.55);
+		-moz-box-shadow: 3px 3px 17px 0px rgba(0,0,0,0.55);
+		box-shadow: 3px 3px 17px 0px rgba(0,0,0,0.55);
+		border-radius: 5px;
+	}
+
 	.search-input {
 		font-family: 'Cairo-Regular', sans-serif;
 		max-width: 90%;
 		width: 450px;
 		height: 40px;
 		border: none;
-		border-radius: 5px;
-		background-color: #212126;
-		padding: 5px 40px 5px 24px;
+		background-color: rgba(0, 0, 0, 0);
+		padding: 5px 10px;
 		font-size: 18px;
 		color: #b08f67;
-		-webkit-box-shadow: 3px 3px 17px 0px rgba(0,0,0,0.55);
-		-moz-box-shadow: 3px 3px 17px 0px rgba(0,0,0,0.55);
-		box-shadow: 3px 3px 17px 0px rgba(0,0,0,0.55);
 	}
 
 	.search-input:focus {
@@ -84,10 +91,9 @@
 	}
 
 	.search-icon {
-		position: relative;
-		right: 32px;
 		color: #605955;
 		cursor: pointer;
+		margin-right: 8px;
 	}
 
 	.upload-button {
