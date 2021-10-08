@@ -1,5 +1,10 @@
 # worldspawn-frontend
 
+This project is meant to be a frontend alternative to WorldSpawn.
+The objective is to improve the UI and provide more features.
+
+
+
 ## Project setup
 ```
 npm install
